@@ -71,11 +71,11 @@ static NSString * const kCellIdentifier = @"exampleCell";
     UILabel *headlinelabel = [UILabel new];
     headlinelabel.font = [UIFont fontWithName:@"Avenir-Light" size:28];
     headlinelabel.textAlignment = NSTextAlignmentCenter;
-    //headlinelabel.textColor = [UIColor customGrayColor];
+    headlinelabel.textColor = [UIColor lightGrayColor];
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.title];
     [attributedString addAttribute:NSForegroundColorAttributeName
-                             value:[UIColor greenColor]
+                             value:[UIColor flatYellowColorDark]
                              range:NSMakeRange(1, 1)];
     
     headlinelabel.attributedText = attributedString;

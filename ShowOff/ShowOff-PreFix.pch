@@ -10,5 +10,6 @@
 #define ShowOff_ShowOff_PreFix_pch
 
 #import <POP.h>
+#import <Chameleon.h>
 
 #endif
