@@ -14,6 +14,7 @@
 		0E1522961AF921F1008CF7CB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E1522941AF921F1008CF7CB /* LaunchScreen.xib */; };
 		0E1522A21AF921F1008CF7CB /* ShowOffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1522A11AF921F1008CF7CB /* ShowOffTests.m */; };
 		0ECCA4A11AF935D0009583FA /* SOMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4A01AF935D0009583FA /* SOMainTableViewCell.m */; };
+		0ECCA4A91AF93BFE009583FA /* SOCollectionLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4A81AF93BFE009583FA /* SOCollectionLayoutViewController.m */; };
 		0EF2A88C1AF92B1B00618A1D /* SOMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF2A88B1AF92B1B00618A1D /* SOMainViewController.m */; };
 		CC70AED795C1489BDB274A4A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC8D02C9A06A439A87A9116 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,8 @@
 		0ECCA49F1AF935D0009583FA /* SOMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMainTableViewCell.h; sourceTree = "<group>"; };
 		0ECCA4A01AF935D0009583FA /* SOMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMainTableViewCell.m; sourceTree = "<group>"; };
 		0ECCA4A21AF93639009583FA /* ShowOff-PreFix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShowOff-PreFix.pch"; sourceTree = "<group>"; };
+		0ECCA4A71AF93BFE009583FA /* SOCollectionLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOCollectionLayoutViewController.h; path = CollectionLayoutViewController/SOCollectionLayoutViewController.h; sourceTree = "<group>"; };
+		0ECCA4A81AF93BFE009583FA /* SOCollectionLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOCollectionLayoutViewController.m; path = CollectionLayoutViewController/SOCollectionLayoutViewController.m; sourceTree = "<group>"; };
 		0EF2A88A1AF92B1B00618A1D /* SOMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMainViewController.h; sourceTree = "<group>"; };
 		0EF2A88B1AF92B1B00618A1D /* SOMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMainViewController.m; sourceTree = "<group>"; };
 		6C0760553CD66B1A0377A819 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +168,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		0ECCA4A31AF93B97009583FA /* CollectionLayoutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0ECCA4A71AF93BFE009583FA /* SOCollectionLayoutViewController.h */,
+				0ECCA4A81AF93BFE009583FA /* SOCollectionLayoutViewController.m */,
+			);
+			name = CollectionLayoutViewController;
+			sourceTree = "<group>";
+		};
 		0EF2A8851AF92B1B00618A1D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +203,7 @@
 		0EF2A8881AF92B1B00618A1D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0ECCA4A31AF93B97009583FA /* CollectionLayoutViewController */,
 				0EF2A8891AF92B1B00618A1D /* Main */,
 			);
 			path = Controller;
@@ -359,6 +372,7 @@
 			files = (
 				0E15228B1AF921F1008CF7CB /* AppDelegate.m in Sources */,
 				0EF2A88C1AF92B1B00618A1D /* SOMainViewController.m in Sources */,
+				0ECCA4A91AF93BFE009583FA /* SOCollectionLayoutViewController.m in Sources */,
 				0ECCA4A11AF935D0009583FA /* SOMainTableViewCell.m in Sources */,
 				0E1522881AF921F1008CF7CB /* main.m in Sources */,
 			);

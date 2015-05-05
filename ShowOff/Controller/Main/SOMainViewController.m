@@ -8,6 +8,7 @@
 
 #import "SOMainViewController.h"
 #import "SOMainTableViewCell.h"
+#import "SOCollectionLayoutViewController.h"
 
 static NSString * const kCellIdentifier = @"exampleCell";
 
@@ -48,30 +49,29 @@ static NSString * const kCellIdentifier = @"exampleCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIViewController *viewController = [self viewControllerForRowAtIndexPath:indexPath];
-    viewController.title = [self titleForRowAtIndexPath:indexPath];
-    viewController.view.backgroundColor = [UIColor whiteColor];
-    [self.navigationController pushViewController:viewController
-                                         animated:YES];
+    Class vcClass               = [self.items[indexPath.row] lastObject];
+    NSString *segueIdentifier   = NSStringFromClass(vcClass);
+    [self performSegueWithIdentifier:segueIdentifier
+                              sender:nil];
 }
 
 #pragma mark Private 
 
 - (void)setupTableView {
-    self.items = @[@[@"Collection Layout", [UIViewController class]]
+    self.items = @[@[@"Collection Layout", [SOCollectionLayoutViewController class]]
                    ];
     [self.tableView registerClass:[SOMainTableViewCell class]
            forCellReuseIdentifier:kCellIdentifier];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.rowHeight = 50.f;
+    self.tableView.separatorStyle   = UITableViewCellSeparatorStyleNone;
+    self.tableView.rowHeight        = 50.f;
 }
 
 - (void)configureTitleView
 {
-    UILabel *headlinelabel = [UILabel new];
-    headlinelabel.font = [UIFont fontWithName:@"Avenir-Light" size:28];
+    UILabel *headlinelabel      = [UILabel new];
+    headlinelabel.font          = [UIFont fontWithName:@"Avenir-Light" size:28];
     headlinelabel.textAlignment = NSTextAlignmentCenter;
-    headlinelabel.textColor = [UIColor lightGrayColor];
+    headlinelabel.textColor     = [UIColor lightGrayColor];
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.title];
     [attributedString addAttribute:NSForegroundColorAttributeName
