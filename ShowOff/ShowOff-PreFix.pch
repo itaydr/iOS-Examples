@@ -1,15 +1,14 @@
 //
-//  ViewController.h
+//  ShowOff-PreFix.pch
 //  ShowOff
 //
 //  Created by Itay Dressler on 5/5/15.
 //  Copyright (c) 2015 dressler. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifndef ShowOff_ShowOff_PreFix_pch
+#define ShowOff_ShowOff_PreFix_pch
 
-@interface ViewController : UIViewController
+#import <POP.h>
 
-
-@end
-
+#endif
