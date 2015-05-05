@@ -1,10 +1,13 @@
 PODS:
+  - ChameleonFramework (1.1.2)
   - pop (1.0.7)
 
 DEPENDENCIES:
+  - ChameleonFramework
   - pop
 
 SPEC CHECKSUMS:
+  ChameleonFramework: 1b4588efcae564886e1a176fa02fb0f4c81a69b3
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
 
 COCOAPODS: 0.36.3

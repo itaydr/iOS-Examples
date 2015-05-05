@@ -1,1 +1,2 @@
 pod 'pop'
+pod 'ChameleonFramework'
