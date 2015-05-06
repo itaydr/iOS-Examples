@@ -9,9 +9,11 @@
 #import "SOImageAnimationViewController.h"
 #import "SOImageControl.h"
 
-#define kHeightFactor           0.75f
-#define kPositionAnimationKey   @"layerPositionAnimation"
-#define kScaleAnimationKey      @"scaleAnimation"
+#define kHeightFactor               0.75f
+#define kPositionAnimationKey       @"layerPositionAnimation"
+#define kScaleAnimationKey          @"scaleAnimation"
+#define kTweaksCategory             @"Image Manipuldation"
+#define kCornerRadiusAnimationKey   @"cornerRadius"
 
 @interface SOImageAnimationViewController ()
 @property (nonatomic, strong)   SOImageControl  *imageControl;
@@ -22,7 +24,7 @@
 #pragma mark Tweaks
 
 + (BOOL)isInDecayState {
-    return YES;
+    return FBTweakValue(kTweaksCategory, @"Pan / Decay", @"Decay Mode", NO);
 }
 
 #pragma mark LifeCycle
@@ -110,7 +112,7 @@
         POPDecayAnimation *positionAnimation = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPosition];
         positionAnimation.delegate = self;
         positionAnimation.velocity = [NSValue valueWithCGPoint:velocity];
-        [recognizer.view.layer pop_addAnimation:positionAnimation forKey:@"layerrPositionAnimation"];
+        [recognizer.view.layer pop_addAnimation:positionAnimation forKey:kPositionAnimationKey];
     }
 }
 
@@ -120,9 +122,9 @@
 - (void)animateDismissWithVelocity:(CGPoint)velocity {
     POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
     positionAnimation.velocity          = [NSValue valueWithCGPoint:velocity];
-    positionAnimation.dynamicsTension   = 10.f;
-    positionAnimation.dynamicsFriction  = 1.0f;
-    positionAnimation.springBounciness  = 12.0f;
+    positionAnimation.dynamicsTension   = FBTweakValue(kTweaksCategory, @"Dismiss", @"Tension", 10);
+    positionAnimation.dynamicsFriction  = FBTweakValue(kTweaksCategory, @"Dismiss", @"Friction", 1);
+    positionAnimation.springBounciness  = FBTweakValue(kTweaksCategory, @"Dismiss", @"Bounciness", 12);;
     [self.imageControl.layer pop_addAnimation:positionAnimation forKey:kPositionAnimationKey];
 }
 
@@ -134,24 +136,24 @@
     
     POPSpringAnimation *scaleAnimation  = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
     scaleAnimation.toValue              = [NSValue valueWithCGSize:CGSizeMake(1, 1)];
-    scaleAnimation.springBounciness     = 10.f;
+    scaleAnimation.springBounciness     = FBTweakValue(kTweaksCategory, @"Scale Up", @"Bounciness", 10);;
     [view.layer pop_addAnimation:scaleAnimation forKey:kScaleAnimationKey];
     
     POPSpringAnimation *corner          = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerCornerRadius];
-    corner.toValue              = @(10);
-    [view.layer pop_addAnimation:corner forKey:@"cornerRadius"];
+    corner.toValue                      = @(10);
+    [view.layer pop_addAnimation:corner forKey:kCornerRadiusAnimationKey];
 }
 
 - (void)scaleDownView:(UIView *)view
 {
     POPSpringAnimation *scaleAnimation  = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
     scaleAnimation.toValue              = [NSValue valueWithCGSize:CGSizeMake(0.5, 0.5)];
-    scaleAnimation.springBounciness     = 10.f;
+    scaleAnimation.springBounciness     = FBTweakValue(kTweaksCategory, @"Scale Down", @"Bounciness", 10);
     [view.layer pop_addAnimation:scaleAnimation forKey:kScaleAnimationKey];
     
     POPSpringAnimation *corner          = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerCornerRadius];
-    corner.toValue              = @(view.bounds.size.width / 2);
-    [view.layer pop_addAnimation:corner forKey:@"cornerRadius"];
+    corner.toValue                      = @(view.bounds.size.width / 2);
+    [view.layer pop_addAnimation:corner forKey:kCornerRadiusAnimationKey];
 }
 
 - (void)pauseAllAnimations:(BOOL)pause forLayer:(CALayer *)layer
@@ -175,6 +177,7 @@
             POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
             positionAnimation.velocity = [NSValue valueWithCGPoint:velocity];
             positionAnimation.toValue = [NSValue valueWithCGPoint:self.view.center];
+            positionAnimation.springBounciness = FBTweakValue(kTweaksCategory, @"Decay", @"Bounciness", 10);
             [self.imageControl.layer pop_addAnimation:positionAnimation forKey:@"layerPositionAnimation"];
         }
     }

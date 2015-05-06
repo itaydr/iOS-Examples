@@ -1,13 +1,16 @@
 PODS:
   - ChameleonFramework (1.1.2)
   - pop (1.0.7)
+  - Tweaks (2.0.0)
 
 DEPENDENCIES:
   - ChameleonFramework
   - pop
+  - Tweaks
 
 SPEC CHECKSUMS:
   ChameleonFramework: 1b4588efcae564886e1a176fa02fb0f4c81a69b3
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  Tweaks: 524fa47636cce3bf3a4d9156e980f10ae9480e81
 
 COCOAPODS: 0.36.3

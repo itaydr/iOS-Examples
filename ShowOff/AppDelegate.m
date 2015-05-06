@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <FBTweakShakeWindow.h>
 
 @interface AppDelegate ()
 
@@ -41,6 +42,16 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark Tweaks
+
+- (UIWindow *)window {
+    if (!_window) {
+        _window = [[FBTweakShakeWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    }
+    
+    return _window;
 }
 
 #pragma mark Apperance

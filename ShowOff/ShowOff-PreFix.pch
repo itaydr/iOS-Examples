@@ -11,5 +11,6 @@
 
 #import <POP.h>
 #import <Chameleon.h>
+#import <FBTweakInline.h>
 
 #endif
