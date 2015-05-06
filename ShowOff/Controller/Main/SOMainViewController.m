@@ -84,11 +84,17 @@ static NSString * const kCellIdentifier = @"exampleCell";
     headlinelabel.textAlignment = NSTextAlignmentCenter;
     headlinelabel.textColor     = [UIColor lightGrayColor];
     
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.title];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"Itay's Examples"];
     [attributedString addAttribute:NSForegroundColorAttributeName
                              value:[UIColor flatYellowColorDark]
                              range:NSMakeRange(1, 1)];
-    
+    [attributedString addAttribute:NSForegroundColorAttributeName
+                             value:[UIColor flatMintColor]
+                             range:NSMakeRange(5, 1)];
+    [attributedString addAttribute:NSForegroundColorAttributeName
+                             value:[UIColor flatOrangeColor]
+                             range:NSMakeRange(8, 1)];
+
     headlinelabel.attributedText = attributedString;
     [headlinelabel sizeToFit];
     
