@@ -41,7 +41,12 @@ static NSString * const kCellIdentifier = @"exampleCell";
     SOMainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier
                                                               forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.items[indexPath.row] firstObject];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[self.items[indexPath.row] firstObject]];
+    [attributedString addAttribute:NSForegroundColorAttributeName
+                             value:self.items[indexPath.row][1]
+                             range:NSMakeRange(1, 1)];
+    
+    cell.textLabel.attributedText = attributedString;
     
     return cell;
 }
@@ -60,9 +65,9 @@ static NSString * const kCellIdentifier = @"exampleCell";
 #pragma mark Private 
 
 - (void)setupTableView {
-    self.items = @[@[@"Collection Layout", [SOCollectionLayoutViewController class]],
-                   @[@"Sliding Menu", [SOSlidingMenuCollectionViewController class]],
-                   @[@"Image + POP", [SOImageAnimationViewController class]]
+    self.items = @[@[@"Collection Layout",[UIColor flatPinkColor] ,[SOCollectionLayoutViewController class]],
+                   @[@"Sliding Menu", [UIColor flatSkyBlueColor] ,[SOSlidingMenuCollectionViewController class]],
+                   @[@"Image + POP", [UIColor flatYellowColor] ,[SOImageAnimationViewController class]]
                    ];
     [self.tableView registerClass:[SOMainTableViewCell class]
            forCellReuseIdentifier:kCellIdentifier];
