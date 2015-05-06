@@ -13,6 +13,8 @@
 		0E1522931AF921F1008CF7CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E1522921AF921F1008CF7CB /* Images.xcassets */; };
 		0E1522961AF921F1008CF7CB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E1522941AF921F1008CF7CB /* LaunchScreen.xib */; };
 		0E1522A21AF921F1008CF7CB /* ShowOffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1522A11AF921F1008CF7CB /* ShowOffTests.m */; };
+		0EB0ADE11AFA249800E42A8A /* SOImageAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0ADE01AFA249800E42A8A /* SOImageAnimationViewController.m */; };
+		0EB0ADE61AFA275800E42A8A /* SOImageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0ADE51AFA275800E42A8A /* SOImageControl.m */; };
 		0ECCA4A11AF935D0009583FA /* SOMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4A01AF935D0009583FA /* SOMainTableViewCell.m */; };
 		0ECCA4A91AF93BFE009583FA /* SOCollectionLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4A81AF93BFE009583FA /* SOCollectionLayoutViewController.m */; };
 		0ECCA4AF1AF93F04009583FA /* SOCardsCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4AE1AF93F04009583FA /* SOCardsCollectionLayout.m */; };
@@ -46,6 +48,10 @@
 		0E15229B1AF921F1008CF7CB /* ShowOffTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowOffTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E1522A01AF921F1008CF7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E1522A11AF921F1008CF7CB /* ShowOffTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowOffTests.m; sourceTree = "<group>"; };
+		0EB0ADDF1AFA249800E42A8A /* SOImageAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOImageAnimationViewController.h; path = "Image Animation/SOImageAnimationViewController.h"; sourceTree = "<group>"; };
+		0EB0ADE01AFA249800E42A8A /* SOImageAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOImageAnimationViewController.m; path = "Image Animation/SOImageAnimationViewController.m"; sourceTree = "<group>"; };
+		0EB0ADE41AFA275800E42A8A /* SOImageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOImageControl.h; path = "Image Control/SOImageControl.h"; sourceTree = "<group>"; };
+		0EB0ADE51AFA275800E42A8A /* SOImageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOImageControl.m; path = "Image Control/SOImageControl.m"; sourceTree = "<group>"; };
 		0ECCA49F1AF935D0009583FA /* SOMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMainTableViewCell.h; sourceTree = "<group>"; };
 		0ECCA4A01AF935D0009583FA /* SOMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMainTableViewCell.m; sourceTree = "<group>"; };
 		0ECCA4A21AF93639009583FA /* ShowOff-PreFix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShowOff-PreFix.pch"; sourceTree = "<group>"; };
@@ -151,6 +157,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0EB0ADE21AFA249D00E42A8A /* Image Animation */ = {
+			isa = PBXGroup;
+			children = (
+				0EB0ADDF1AFA249800E42A8A /* SOImageAnimationViewController.h */,
+				0EB0ADE01AFA249800E42A8A /* SOImageAnimationViewController.m */,
+			);
+			name = "Image Animation";
+			sourceTree = "<group>";
+		};
+		0EB0ADE31AFA273300E42A8A /* Image Control */ = {
+			isa = PBXGroup;
+			children = (
+				0EB0ADE41AFA275800E42A8A /* SOImageControl.h */,
+				0EB0ADE51AFA275800E42A8A /* SOImageControl.m */,
+			);
+			name = "Image Control";
+			sourceTree = "<group>";
+		};
 		0ECCA49B1AF935B4009583FA /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +237,7 @@
 		0EF2A8851AF92B1B00618A1D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0EB0ADE31AFA273300E42A8A /* Image Control */,
 				0ECCA49B1AF935B4009583FA /* TableView */,
 				0ECCA49D1AF935B4009583FA /* CollectionView */,
 			);
@@ -238,6 +263,7 @@
 			children = (
 				0ECCA4A31AF93B97009583FA /* CollectionLayoutViewController */,
 				0EF2A8891AF92B1B00618A1D /* Main */,
+				0EB0ADE21AFA249D00E42A8A /* Image Animation */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -406,11 +432,13 @@
 				0ECCA4B31AF9408B009583FA /* SOCollectionViewCell.m in Sources */,
 				0E15228B1AF921F1008CF7CB /* AppDelegate.m in Sources */,
 				0ECCA4C01AFA17D1009583FA /* SOSlidingMenuCollectionViewController.m in Sources */,
+				0EB0ADE11AFA249800E42A8A /* SOImageAnimationViewController.m in Sources */,
 				0ECCA4BD1AFA15EA009583FA /* SOSlidingMenuCollectionViewCell.m in Sources */,
 				0ECCA4AF1AF93F04009583FA /* SOCardsCollectionLayout.m in Sources */,
 				0EF2A88C1AF92B1B00618A1D /* SOMainViewController.m in Sources */,
 				0ECCA4A91AF93BFE009583FA /* SOCollectionLayoutViewController.m in Sources */,
 				0ECCA4A11AF935D0009583FA /* SOMainTableViewCell.m in Sources */,
+				0EB0ADE61AFA275800E42A8A /* SOImageControl.m in Sources */,
 				0E1522881AF921F1008CF7CB /* main.m in Sources */,
 				0ECCA4B71AFA13E7009583FA /* SOSlidingMenuLayout.m in Sources */,
 			);

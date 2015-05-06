@@ -10,6 +10,7 @@
 #import "SOMainTableViewCell.h"
 #import "SOCollectionLayoutViewController.h"
 #import "SOSlidingMenuCollectionViewController.h"
+#import "SOImageAnimationViewController.h"
 
 static NSString * const kCellIdentifier = @"exampleCell";
 
@@ -60,7 +61,8 @@ static NSString * const kCellIdentifier = @"exampleCell";
 
 - (void)setupTableView {
     self.items = @[@[@"Collection Layout", [SOCollectionLayoutViewController class]],
-                   @[@"Sliding Menu", [SOSlidingMenuCollectionViewController class]]
+                   @[@"Sliding Menu", [SOSlidingMenuCollectionViewController class]],
+                   @[@"Image + POP", [SOImageAnimationViewController class]]
                    ];
     [self.tableView registerClass:[SOMainTableViewCell class]
            forCellReuseIdentifier:kCellIdentifier];

@@ -40,6 +40,7 @@
                     <connections>
                         <segue destination="EbE-ic-9Yn" kind="show" identifier="SOCollectionLayoutViewController" id="OjC-WJ-R1U"/>
                         <segue destination="Dss-yW-bRI" kind="show" identifier="SOSlidingMenuCollectionViewController" id="JgK-og-HmP"/>
+                        <segue destination="FPH-VR-Btm" kind="show" identifier="SOImageAnimationViewController" id="dgg-si-Vk8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nje-TP-OsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,6 +185,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVQ-cL-MfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1269.5" y="1369.5"/>
+        </scene>
+        <!--Image Animation View Controller-->
+        <scene sceneID="R39-Uu-arO">
+            <objects>
+                <viewController id="FPH-VR-Btm" customClass="SOImageAnimationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zCP-ib-tqa"/>
+                        <viewControllerLayoutGuide type="bottom" id="bXz-0N-3fq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bNp-5m-cQL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVA-fE-a85" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712.5" y="1369.5"/>
         </scene>
     </scenes>
 </document>
