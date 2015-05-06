@@ -37,24 +37,15 @@
     CGRect visibleRect;
     visibleRect.origin              = self.collectionView.contentOffset;
     visibleRect.size                = self.collectionView.bounds.size;
-    CGFloat collectionViewHeight    = self.collectionView.bounds.size.height / kCollectionHeoghtFactor;
-    
+
     for (UICollectionViewLayoutAttributes *attributes in attribs) {
         if (CGRectIntersectsRect(attributes.frame, rect))
         {
             CGFloat cardX           = attributes.center.x;
             CGFloat distance        =  self.collectionView.contentOffset.x + (0.5 * self.collectionView.bounds.size.width);
             CGFloat computedOffset  = cardX  - distance;
-            
-            CGFloat fractionComputedOffset  = computedOffset /(attributes.bounds.size.width /17.0);
-            CGFloat fraction                = computedOffset/ attributes.bounds.size.width;
-            
-            CGFloat offset              = fabs((fractionComputedOffset)* (1 - fabsf(cosf(fraction))));
-            CGFloat yComputedOffset     = collectionViewHeight + offset;
-            attributes.center           = CGPointMake(attributes.center.x, yComputedOffset + collectionViewHeight);
-            attributes.frame            = CGRectMake(attributes.frame.origin.x, attributes.frame.origin.y, attributes.frame.size.width, attributes.frame.size.width);
-            //transform
-            attributes.transform3D      = [self transformFromFraction:fraction];
+            CGFloat fraction        = computedOffset/ attributes.bounds.size.width;
+            attributes.transform3D  = [self transformFromFraction:fraction];
         }
     }
     
