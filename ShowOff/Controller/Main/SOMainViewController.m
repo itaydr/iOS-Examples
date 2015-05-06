@@ -9,6 +9,7 @@
 #import "SOMainViewController.h"
 #import "SOMainTableViewCell.h"
 #import "SOCollectionLayoutViewController.h"
+#import "SOSlidingMenuCollectionViewController.h"
 
 static NSString * const kCellIdentifier = @"exampleCell";
 
@@ -58,7 +59,8 @@ static NSString * const kCellIdentifier = @"exampleCell";
 #pragma mark Private 
 
 - (void)setupTableView {
-    self.items = @[@[@"Collection Layout", [SOCollectionLayoutViewController class]]
+    self.items = @[@[@"Collection Layout", [SOCollectionLayoutViewController class]],
+                   @[@"Sliding Menu", [SOSlidingMenuCollectionViewController class]]
                    ];
     [self.tableView registerClass:[SOMainTableViewCell class]
            forCellReuseIdentifier:kCellIdentifier];

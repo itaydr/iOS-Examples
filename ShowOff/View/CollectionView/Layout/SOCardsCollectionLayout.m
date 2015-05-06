@@ -28,7 +28,6 @@
     self.itemSize = CGSizeMake(self.collectionView.bounds.size.width / kItemSizeWidthFactor,
                                self.collectionView.bounds.size.height / kItemSizeHeightFactor);
     self.scrollDirection                = UICollectionViewScrollDirectionHorizontal;
-    self.collectionView.pagingEnabled   = NO;
 }
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {

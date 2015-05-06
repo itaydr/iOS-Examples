@@ -17,6 +17,9 @@
 		0ECCA4A91AF93BFE009583FA /* SOCollectionLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4A81AF93BFE009583FA /* SOCollectionLayoutViewController.m */; };
 		0ECCA4AF1AF93F04009583FA /* SOCardsCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4AE1AF93F04009583FA /* SOCardsCollectionLayout.m */; };
 		0ECCA4B31AF9408B009583FA /* SOCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4B21AF9408B009583FA /* SOCollectionViewCell.m */; };
+		0ECCA4B71AFA13E7009583FA /* SOSlidingMenuLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4B61AFA13E7009583FA /* SOSlidingMenuLayout.m */; };
+		0ECCA4BD1AFA15EA009583FA /* SOSlidingMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4BC1AFA15EA009583FA /* SOSlidingMenuCollectionViewCell.m */; };
+		0ECCA4C01AFA17D1009583FA /* SOSlidingMenuCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4BF1AFA17D1009583FA /* SOSlidingMenuCollectionViewController.m */; };
 		0EF2A88C1AF92B1B00618A1D /* SOMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF2A88B1AF92B1B00618A1D /* SOMainViewController.m */; };
 		CC70AED795C1489BDB274A4A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC8D02C9A06A439A87A9116 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,12 @@
 		0ECCA4AE1AF93F04009583FA /* SOCardsCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOCardsCollectionLayout.m; path = Layout/SOCardsCollectionLayout.m; sourceTree = "<group>"; };
 		0ECCA4B11AF9408B009583FA /* SOCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCollectionViewCell.h; sourceTree = "<group>"; };
 		0ECCA4B21AF9408B009583FA /* SOCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCollectionViewCell.m; sourceTree = "<group>"; };
+		0ECCA4B51AFA13E7009583FA /* SOSlidingMenuLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOSlidingMenuLayout.h; path = Layout/SOSlidingMenuLayout.h; sourceTree = "<group>"; };
+		0ECCA4B61AFA13E7009583FA /* SOSlidingMenuLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOSlidingMenuLayout.m; path = Layout/SOSlidingMenuLayout.m; sourceTree = "<group>"; };
+		0ECCA4BB1AFA15EA009583FA /* SOSlidingMenuCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOSlidingMenuCollectionViewCell.h; sourceTree = "<group>"; };
+		0ECCA4BC1AFA15EA009583FA /* SOSlidingMenuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSlidingMenuCollectionViewCell.m; sourceTree = "<group>"; };
+		0ECCA4BE1AFA17D1009583FA /* SOSlidingMenuCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOSlidingMenuCollectionViewController.h; path = CollectionLayoutViewController/SOSlidingMenuCollectionViewController.h; sourceTree = "<group>"; };
+		0ECCA4BF1AFA17D1009583FA /* SOSlidingMenuCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOSlidingMenuCollectionViewController.m; path = CollectionLayoutViewController/SOSlidingMenuCollectionViewController.m; sourceTree = "<group>"; };
 		0EF2A88A1AF92B1B00618A1D /* SOMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMainViewController.h; sourceTree = "<group>"; };
 		0EF2A88B1AF92B1B00618A1D /* SOMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMainViewController.m; sourceTree = "<group>"; };
 		6C0760553CD66B1A0377A819 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +182,8 @@
 			children = (
 				0ECCA4B11AF9408B009583FA /* SOCollectionViewCell.h */,
 				0ECCA4B21AF9408B009583FA /* SOCollectionViewCell.m */,
+				0ECCA4BB1AFA15EA009583FA /* SOSlidingMenuCollectionViewCell.h */,
+				0ECCA4BC1AFA15EA009583FA /* SOSlidingMenuCollectionViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -182,6 +193,8 @@
 			children = (
 				0ECCA4A71AF93BFE009583FA /* SOCollectionLayoutViewController.h */,
 				0ECCA4A81AF93BFE009583FA /* SOCollectionLayoutViewController.m */,
+				0ECCA4BE1AFA17D1009583FA /* SOSlidingMenuCollectionViewController.h */,
+				0ECCA4BF1AFA17D1009583FA /* SOSlidingMenuCollectionViewController.m */,
 			);
 			name = CollectionLayoutViewController;
 			sourceTree = "<group>";
@@ -191,6 +204,8 @@
 			children = (
 				0ECCA4AD1AF93F04009583FA /* SOCardsCollectionLayout.h */,
 				0ECCA4AE1AF93F04009583FA /* SOCardsCollectionLayout.m */,
+				0ECCA4B51AFA13E7009583FA /* SOSlidingMenuLayout.h */,
+				0ECCA4B61AFA13E7009583FA /* SOSlidingMenuLayout.m */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -390,11 +405,14 @@
 			files = (
 				0ECCA4B31AF9408B009583FA /* SOCollectionViewCell.m in Sources */,
 				0E15228B1AF921F1008CF7CB /* AppDelegate.m in Sources */,
+				0ECCA4C01AFA17D1009583FA /* SOSlidingMenuCollectionViewController.m in Sources */,
+				0ECCA4BD1AFA15EA009583FA /* SOSlidingMenuCollectionViewCell.m in Sources */,
 				0ECCA4AF1AF93F04009583FA /* SOCardsCollectionLayout.m in Sources */,
 				0EF2A88C1AF92B1B00618A1D /* SOMainViewController.m in Sources */,
 				0ECCA4A91AF93BFE009583FA /* SOCollectionLayoutViewController.m in Sources */,
 				0ECCA4A11AF935D0009583FA /* SOMainTableViewCell.m in Sources */,
 				0E1522881AF921F1008CF7CB /* main.m in Sources */,
+				0ECCA4B71AFA13E7009583FA /* SOSlidingMenuLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
