@@ -41,6 +41,7 @@
                         <segue destination="EbE-ic-9Yn" kind="show" identifier="SOCollectionLayoutViewController" id="OjC-WJ-R1U"/>
                         <segue destination="Dss-yW-bRI" kind="show" identifier="SOSlidingMenuCollectionViewController" id="JgK-og-HmP"/>
                         <segue destination="FPH-VR-Btm" kind="show" identifier="SOImageAnimationViewController" id="dgg-si-Vk8"/>
+                        <segue destination="SF6-vA-Jfp" kind="show" identifier="SOHeaderCollectionViewController" id="PJc-9n-xJ3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nje-TP-OsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,6 +186,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVQ-cL-MfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1269.5" y="1369.5"/>
+        </scene>
+        <!--Header Collection View Controller-->
+        <scene sceneID="SZ1-GD-Gsj">
+            <objects>
+                <collectionViewController id="SF6-vA-Jfp" customClass="SOHeaderCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="7E2-46-wUZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="U24-Ec-r51">
+                            <size key="itemSize" width="334" height="134"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="J6a-Uf-VBk" customClass="SOCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="334" height="134"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iZP-xr-gKs">
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="134"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="iZP-xr-gKs" secondAttribute="bottom" constant="-8" id="9U0-he-nCL"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="iZP-xr-gKs" secondAttribute="trailing" constant="-8" id="MD2-y7-14Q"/>
+                                    <constraint firstItem="iZP-xr-gKs" firstAttribute="leading" secondItem="J6a-Uf-VBk" secondAttribute="leadingMargin" constant="-8" id="PaK-eJ-I8L"/>
+                                    <constraint firstItem="iZP-xr-gKs" firstAttribute="top" secondItem="J6a-Uf-VBk" secondAttribute="topMargin" constant="-8" id="mE7-Fe-eFi"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="iZP-xr-gKs" id="pwB-7z-BW7"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SOHeaderCollectionReusableView" id="vqA-34-Vcx" customClass="SOHeaderCollectionReusableView">
+                            <rect key="frame" x="0.0" y="64" width="50" height="667"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gut-mz-IRu" userLabel="title">
+                                    <rect key="frame" x="8" y="8" width="61" height="34"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottomMargin" secondItem="gut-mz-IRu" secondAttribute="bottom" id="3Vd-zh-ZYJ"/>
+                                <constraint firstItem="gut-mz-IRu" firstAttribute="leading" secondItem="vqA-34-Vcx" secondAttribute="leadingMargin" id="MS2-CU-EAV"/>
+                                <constraint firstItem="gut-mz-IRu" firstAttribute="top" secondItem="vqA-34-Vcx" secondAttribute="topMargin" id="TWe-V3-hQN"/>
+                                <constraint firstAttribute="centerX" secondItem="gut-mz-IRu" secondAttribute="centerX" constant="158.5" id="XiK-Bc-M9z"/>
+                                <constraint firstItem="gut-mz-IRu" firstAttribute="top" secondItem="vqA-34-Vcx" secondAttribute="topMargin" constant="6" id="siX-N2-Yte"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="XiK-Bc-M9z"/>
+                                    <exclude reference="siX-N2-Yte"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <outlet property="titleLabel" destination="gut-mz-IRu" id="hhe-kl-CDG"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="SF6-vA-Jfp" id="JOQ-mS-2Mo"/>
+                            <outlet property="delegate" destination="SF6-vA-Jfp" id="Z8c-qb-ZP3"/>
+                        </connections>
+                    </collectionView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2n-Sk-uAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2180.5" y="1369.5"/>
         </scene>
         <!--Image Animation View Controller-->
         <scene sceneID="R39-Uu-arO">

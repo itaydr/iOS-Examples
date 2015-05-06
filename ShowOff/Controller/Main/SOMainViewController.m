@@ -11,6 +11,7 @@
 #import "SOCollectionLayoutViewController.h"
 #import "SOSlidingMenuCollectionViewController.h"
 #import "SOImageAnimationViewController.h"
+#import "SOHeaderCollectionViewController.h"
 
 static NSString * const kCellIdentifier = @"exampleCell";
 
@@ -67,7 +68,8 @@ static NSString * const kCellIdentifier = @"exampleCell";
 - (void)setupTableView {
     self.items = @[@[@"Collection Layout",[UIColor flatPinkColor] ,[SOCollectionLayoutViewController class]],
                    @[@"Sliding Menu", [UIColor flatSkyBlueColor] ,[SOSlidingMenuCollectionViewController class]],
-                   @[@"Image + POP", [UIColor flatYellowColor] ,[SOImageAnimationViewController class]]
+                   @[@"Image + POP", [UIColor flatYellowColor] ,[SOImageAnimationViewController class]],
+                   @[@"Layout + Header", [UIColor flatMintColor] ,[SOHeaderCollectionViewController class]]
                    ];
     [self.tableView registerClass:[SOMainTableViewCell class]
            forCellReuseIdentifier:kCellIdentifier];
