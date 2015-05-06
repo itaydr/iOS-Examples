@@ -15,6 +15,8 @@
 		0E1522A21AF921F1008CF7CB /* ShowOffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1522A11AF921F1008CF7CB /* ShowOffTests.m */; };
 		0ECCA4A11AF935D0009583FA /* SOMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4A01AF935D0009583FA /* SOMainTableViewCell.m */; };
 		0ECCA4A91AF93BFE009583FA /* SOCollectionLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4A81AF93BFE009583FA /* SOCollectionLayoutViewController.m */; };
+		0ECCA4AF1AF93F04009583FA /* SOCardsCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4AE1AF93F04009583FA /* SOCardsCollectionLayout.m */; };
+		0ECCA4B31AF9408B009583FA /* SOCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECCA4B21AF9408B009583FA /* SOCollectionViewCell.m */; };
 		0EF2A88C1AF92B1B00618A1D /* SOMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF2A88B1AF92B1B00618A1D /* SOMainViewController.m */; };
 		CC70AED795C1489BDB274A4A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC8D02C9A06A439A87A9116 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,10 @@
 		0ECCA4A21AF93639009583FA /* ShowOff-PreFix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShowOff-PreFix.pch"; sourceTree = "<group>"; };
 		0ECCA4A71AF93BFE009583FA /* SOCollectionLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOCollectionLayoutViewController.h; path = CollectionLayoutViewController/SOCollectionLayoutViewController.h; sourceTree = "<group>"; };
 		0ECCA4A81AF93BFE009583FA /* SOCollectionLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOCollectionLayoutViewController.m; path = CollectionLayoutViewController/SOCollectionLayoutViewController.m; sourceTree = "<group>"; };
+		0ECCA4AD1AF93F04009583FA /* SOCardsCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOCardsCollectionLayout.h; path = Layout/SOCardsCollectionLayout.h; sourceTree = "<group>"; };
+		0ECCA4AE1AF93F04009583FA /* SOCardsCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SOCardsCollectionLayout.m; path = Layout/SOCardsCollectionLayout.m; sourceTree = "<group>"; };
+		0ECCA4B11AF9408B009583FA /* SOCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCollectionViewCell.h; sourceTree = "<group>"; };
+		0ECCA4B21AF9408B009583FA /* SOCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCollectionViewCell.m; sourceTree = "<group>"; };
 		0EF2A88A1AF92B1B00618A1D /* SOMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMainViewController.h; sourceTree = "<group>"; };
 		0EF2A88B1AF92B1B00618A1D /* SOMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMainViewController.m; sourceTree = "<group>"; };
 		6C0760553CD66B1A0377A819 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				0ECCA49E1AF935B4009583FA /* Cells */,
+				0ECCA4B01AF93F16009583FA /* Layout */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -164,6 +171,8 @@
 		0ECCA49E1AF935B4009583FA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0ECCA4B11AF9408B009583FA /* SOCollectionViewCell.h */,
+				0ECCA4B21AF9408B009583FA /* SOCollectionViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -175,6 +184,15 @@
 				0ECCA4A81AF93BFE009583FA /* SOCollectionLayoutViewController.m */,
 			);
 			name = CollectionLayoutViewController;
+			sourceTree = "<group>";
+		};
+		0ECCA4B01AF93F16009583FA /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				0ECCA4AD1AF93F04009583FA /* SOCardsCollectionLayout.h */,
+				0ECCA4AE1AF93F04009583FA /* SOCardsCollectionLayout.m */,
+			);
+			name = Layout;
 			sourceTree = "<group>";
 		};
 		0EF2A8851AF92B1B00618A1D /* View */ = {
@@ -370,7 +388,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ECCA4B31AF9408B009583FA /* SOCollectionViewCell.m in Sources */,
 				0E15228B1AF921F1008CF7CB /* AppDelegate.m in Sources */,
+				0ECCA4AF1AF93F04009583FA /* SOCardsCollectionLayout.m in Sources */,
 				0EF2A88C1AF92B1B00618A1D /* SOMainViewController.m in Sources */,
 				0ECCA4A91AF93BFE009583FA /* SOCollectionLayoutViewController.m in Sources */,
 				0ECCA4A11AF935D0009583FA /* SOMainTableViewCell.m in Sources */,

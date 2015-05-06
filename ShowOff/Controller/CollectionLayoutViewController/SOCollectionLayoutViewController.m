@@ -21,11 +21,6 @@ static NSString * const reuseIdentifier = @"imageCell";
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-
-}
-
 #pragma mark <UICollectionViewDataSource>
 
 
